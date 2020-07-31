@@ -16,12 +16,19 @@
 
 .row {
 	display: flex;
+	padding: 5px 10px;
+}
+
+.current-row {
+	background-color: #4fd1c5;
+	border: 0.5px solid #234e52;
+	border-radius: 5px;
 }
 
 .tile {
 	border: 1.5px solid black;
 	border-radius: 5px;
-	margin: 2px;
+	margin: 0px 2px;
 	background-color: #2b6cb0;
 }
 

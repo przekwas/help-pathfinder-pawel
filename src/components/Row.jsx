@@ -1,16 +1,18 @@
 import React, { useState } from 'react';
 import Tile from './Tile';
 
-const Row = ({ tileCount, ...rest }) => {
+const Row = ({ tileCount, gameRow, whichRow, ...rest }) => {
 	const [rowDim, setRowDim] = useState(false);
 
 	return (
-		<div className="row">
+		<div className={`row ${gameRow === whichRow && 'current-row'}`}>
 			{tileCount.map((tile, i) => (
 				<Tile
 					key={i}
 					tile={tile}
-					rowDim={rowDim}
+                    rowDim={rowDim}
+                    gameRow={gameRow}
+                    whichRow={whichRow}
 					setRowDim={setRowDim}
 					{...rest}
 				/>

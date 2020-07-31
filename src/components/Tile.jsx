@@ -20,7 +20,7 @@ const Tile = ({ tile, rowDim, setRowDim, gameRow, whichRow, dispatch }) => {
 	return (
 		<div
 			onClick={tileClick}
-			className={`tile-base tile ${hitOrMiss} ${rowDim ? 'dim' : ''}`}
+			className={`tile-base tile ${hitOrMiss} ${rowDim && 'dim'}`}
 			id={tile}
 		/>
 	);
