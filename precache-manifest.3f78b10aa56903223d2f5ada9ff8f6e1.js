@@ -1,11 +1,11 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "94b247a1139824479698aacf6ac48eb0",
+    "revision": "38b49722dbfa221df1736a52ec5857ba",
     "url": "/help-pathfinder-pawel/index.html"
   },
   {
-    "revision": "ada05a50937c175f7a47",
-    "url": "/help-pathfinder-pawel/static/css/main.23640e58.chunk.css"
+    "revision": "a907e0b852a51f2a39d8",
+    "url": "/help-pathfinder-pawel/static/css/main.0c1fc0a2.chunk.css"
   },
   {
     "revision": "6872ccb4c03b30aa525f",
@@ -16,7 +16,7 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/help-pathfinder-pawel/static/js/2.fa1b92a1.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "ada05a50937c175f7a47",
+    "revision": "a907e0b852a51f2a39d8",
     "url": "/help-pathfinder-pawel/static/js/main.c79db11f.chunk.js"
   },
   {
