@@ -17,14 +17,15 @@ const mapData = [
 ];
 
 const initialCount = {
-    incorrect: 0,
-    correct: 0
+	incorrect: 0,
+	correct: 0,
+	gameRow: 0
 };
 
 const countReducer = (state, action) => {
 	switch (action.type) {
 		case 'right':
-			return { ...state, correct: state.correct + 1 };
+			return { ...state, correct: state.correct + 1, gameRow: state.gameRow + 1 };
 		case 'wrong':
 			return { ...state, incorrect: state.incorrect + 1 };
 		default:
@@ -38,13 +39,19 @@ const App = () => {
 	return (
 		<>
 			<div className="totals">
-				<h5>Total Correct: <span className="correct">{state.correct}</span></h5>
+				<h5>
+					Total Correct: <span className="correct">{state.correct}</span>
+				</h5>
 				<h5>Total Guesses: {state.correct + state.incorrect}</h5>
-				<h5>Total Wrong: <span className="incorrect">{state.incorrect}</span></h5>
+				<h5>
+					Total Wrong: <span className="incorrect">{state.incorrect}</span>
+				</h5>
 			</div>
 			{mapData.map((row, i) => (
 				<Row
 					key={`row-count-${i}`}
+					whichRow={i}
+					gameRow={state.gameRow}
 					tileCount={row}
 					dispatch={dispatch}
 				/>
