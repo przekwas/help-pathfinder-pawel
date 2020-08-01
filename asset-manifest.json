@@ -1,19 +1,19 @@
 {
   "files": {
-    "main.js": "/help-pathfinder-pawel/static/js/main.8d76f655.chunk.js",
-    "main.js.map": "/help-pathfinder-pawel/static/js/main.8d76f655.chunk.js.map",
+    "main.js": "/help-pathfinder-pawel/static/js/main.b10aaa4d.chunk.js",
+    "main.js.map": "/help-pathfinder-pawel/static/js/main.b10aaa4d.chunk.js.map",
     "runtime-main.js": "/help-pathfinder-pawel/static/js/runtime-main.0386d983.js",
     "runtime-main.js.map": "/help-pathfinder-pawel/static/js/runtime-main.0386d983.js.map",
-    "static/js/2.eed6ba6d.chunk.js": "/help-pathfinder-pawel/static/js/2.eed6ba6d.chunk.js",
-    "static/js/2.eed6ba6d.chunk.js.map": "/help-pathfinder-pawel/static/js/2.eed6ba6d.chunk.js.map",
+    "static/js/2.a9feca1b.chunk.js": "/help-pathfinder-pawel/static/js/2.a9feca1b.chunk.js",
+    "static/js/2.a9feca1b.chunk.js.map": "/help-pathfinder-pawel/static/js/2.a9feca1b.chunk.js.map",
     "index.html": "/help-pathfinder-pawel/index.html",
-    "precache-manifest.bd1c0ea38a412b8cc42aa7b736e7d46d.js": "/help-pathfinder-pawel/precache-manifest.bd1c0ea38a412b8cc42aa7b736e7d46d.js",
+    "precache-manifest.85e7710f5bd5ad1f4a53637839029368.js": "/help-pathfinder-pawel/precache-manifest.85e7710f5bd5ad1f4a53637839029368.js",
     "service-worker.js": "/help-pathfinder-pawel/service-worker.js",
-    "static/js/2.eed6ba6d.chunk.js.LICENSE.txt": "/help-pathfinder-pawel/static/js/2.eed6ba6d.chunk.js.LICENSE.txt"
+    "static/js/2.a9feca1b.chunk.js.LICENSE.txt": "/help-pathfinder-pawel/static/js/2.a9feca1b.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime-main.0386d983.js",
-    "static/js/2.eed6ba6d.chunk.js",
-    "static/js/main.8d76f655.chunk.js"
+    "static/js/2.a9feca1b.chunk.js",
+    "static/js/main.b10aaa4d.chunk.js"
   ]
 }
