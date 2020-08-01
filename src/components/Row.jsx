@@ -1,25 +1,38 @@
 import React, { useState } from 'react';
-import { v4 as uuidv4 } from 'uuid';
+import styled from 'styled-components';
 import Tile from './Tile';
 
-const Row = ({ tileCount, gameRow, whichRow, ...rest }) => {
+const Row = ({ tiles, gameRow, whichRow, ...rest }) => {
 	const [rowDim, setRowDim] = useState(false);
 
 	return (
-		<div className={`row ${gameRow === whichRow && 'current-row'}`}>
-			{tileCount.map((tile, i) => (
+		<GameRow gameRow={gameRow} whichRow={whichRow}>
+			{tiles.map((tile, i) => (
 				<Tile
 					key={`col-${i}`}
 					tile={tile}
-                    rowDim={rowDim}
-                    gameRow={gameRow}
-                    whichRow={whichRow}
+					rowDim={rowDim}
+					gameRow={gameRow}
+					whichRow={whichRow}
 					setRowDim={setRowDim}
 					{...rest}
 				/>
 			))}
-		</div>
+		</GameRow>
 	);
 };
+
+const GameRow = styled.div`
+	display: flex;
+	justify-content: center;
+	padding: 5px 10px;
+	${({ gameRow, whichRow }) =>
+		gameRow === whichRow &&
+		`
+	background-color: #4fd1c5;
+	border: 1px solid #234e52;
+	border-radius: 5px;
+`}
+`;
 
 export default Row;
