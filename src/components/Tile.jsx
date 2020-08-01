@@ -43,6 +43,8 @@ const TileStyle = styled.div`
 				return 'background-color: #2f855a !important;';
 			case 'wrong':
 				return 'background-color: #9b2c2c !important;';
+			default:
+				break;
 		}
 	}}
 	${({ rowDim }) => rowDim && 'background-color: #4a5568;'}
