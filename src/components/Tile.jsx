@@ -24,7 +24,8 @@ const Tile = ({ tile, rowDim, setRowDim, gameRow, whichRow, dispatch }) => {
 };
 
 const TileStyle = styled.div`
-	border: 1.5px solid black;
+	border: 1px solid;
+	border-color: ${({ theme }) => theme.border};
 	border-radius: 5px;
 	box-sizing: border-box;
 	height: 25px;
