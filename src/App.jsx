@@ -1,37 +1,12 @@
-import React, { useReducer } from 'react';
-import './styles/app.css';
+import React, { useReducer, useState, useEffect } from 'react';
+import { v4 as uuidv4 } from 'uuid';
+import { makeGrid } from './utils/make-grid';
+import { countReducer, initialCount } from './utils/count-reducer';
 
+import './styles/app.css';
 import Row from './components/Row';
 
-const mapData = [
-	[1, 1, 1, 1, 1, 1, 0, 1, 1, 1],
-	[1, 1, 1, 1, 1, 1, 1, 0, 1, 1],
-	[1, 1, 1, 1, 1, 1, 0, 1, 1, 1],
-	[1, 1, 1, 1, 1, 1, 0, 1, 1, 1],
-	[1, 1, 1, 1, 1, 0, 1, 1, 1, 1],
-	[1, 1, 1, 1, 0, 1, 1, 1, 1, 1],
-	[1, 1, 1, 0, 1, 1, 1, 1, 1, 1],
-	[1, 1, 1, 1, 0, 1, 1, 1, 1, 1],
-	[1, 1, 1, 1, 0, 1, 1, 1, 1, 1],
-	[1, 1, 1, 1, 1, 0, 1, 1, 1, 1]
-];
-
-const initialCount = {
-	incorrect: 0,
-	correct: 0,
-	gameRow: 0
-};
-
-const countReducer = (state, action) => {
-	switch (action.type) {
-		case 'right':
-			return { ...state, correct: state.correct + 1, gameRow: state.gameRow + 1 };
-		case 'wrong':
-			return { ...state, incorrect: state.incorrect + 1 };
-		default:
-			return state;
-	}
-};
+const grid = makeGrid({ rows: 10, cols: 10 });
 
 const App = () => {
 	const [state, dispatch] = useReducer(countReducer, initialCount);
@@ -47,9 +22,9 @@ const App = () => {
 					Total Wrong: <span className="incorrect">{state.incorrect}</span>
 				</h5>
 			</div>
-			{mapData.map((row, i) => (
+			{grid.map((row, i) => (
 				<Row
-					key={`row-count-${i}`}
+					key={`row-${i}`}
 					whichRow={i}
 					gameRow={state.gameRow}
 					tileCount={row}

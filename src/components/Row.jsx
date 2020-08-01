@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { v4 as uuidv4 } from 'uuid';
 import Tile from './Tile';
 
 const Row = ({ tileCount, gameRow, whichRow, ...rest }) => {
@@ -8,7 +9,7 @@ const Row = ({ tileCount, gameRow, whichRow, ...rest }) => {
 		<div className={`row ${gameRow === whichRow && 'current-row'}`}>
 			{tileCount.map((tile, i) => (
 				<Tile
-					key={i}
+					key={`col-${i}`}
 					tile={tile}
                     rowDim={rowDim}
                     gameRow={gameRow}
